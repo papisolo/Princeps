@@ -1,0 +1,74 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+            nzCollapsible
+            nzWidth="256px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null">
+    <div class="sidebar-logo">
+        <h1>CreditWallet</h1>
+    </div>
+   
+    <div class = "menu-list" >
+      <ul nz-menu nzTheme="dark" nzMode="inline" class="antmenu" >
+      <li nz-menu-item class = "menuitem" >
+          
+       <a class="nav-link" routerLink="/welcome" class = "menu-link">
+        <span nz-icon nzType = "appstore"></span>
+        Dashboard
+       </a>
+      </li>
+
+      <li nz-menu-item class = "menuitem">
+        <span nz-icon nzType = "file"></span>
+        <span> Loans</span>
+      </li>
+      <li nz-menu-item class = "menuitem" >
+        <span nz-icon nzType = "sync"></span>
+        <span> Recovery</span>
+      </li>
+      <li nz-menu-item class = "menuitem">
+        <span nz-icon nzType = "check-circle"></span>
+        <span>Verification</span>
+      </li>
+      <li nz-menu-item class = "menuitem" >
+        <span nz-icon nzType = "file"></span>
+        <span> Reports</span>
+      </li>
+      <li nz-menu-item  class = "menuitem">
+        <span nz-icon nzType = "file"></span>
+        <span> Deductions</span>
+      </li>
+      <li nz-menu-item class = "menuitem" >
+        <span nz-icon nzType = "file"></span>
+        <span> Return Business</span>
+      </li>
+      <li nz-menu-item class = "menuitem">
+        <span nz-icon nzType = "file"></span>
+        <span> Loan Risk Operation</span>
+      </li>
+      <li nz-menu-item class = "menuitem">
+        <span nz-icon nzType = "utility"></span>
+        <span> Utilities</span>
+      </li>
+      <li nz-menu-item  class = "menuitem">
+        <span nz-icon nzType = "user"></span>
+        <span> User Management</span>
+      </li>
+    </ul></div>
+    
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <h5>Good Morning, Micheal</h5>
+           <!--<img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">--> 
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
